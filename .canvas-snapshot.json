@@ -4,7 +4,7 @@
     "title": "Instance Methods Quiz",
     "html_url": "https://learning.flatironschool.com/courses/6676/quizzes/44708",
     "mobile_url": "https://learning.flatironschool.com/courses/6676/quizzes/44708?force_user=1&persist_headless=1",
-    "description": "<div id=\"git-data-element\" data-org=\"learn-co-curriculum\" data-repo=\"java-instance-methods-quiz\"></div>\n<header class=\"fis-header\">\n  <a class=\"fis-git-link\" href=\"https://github.com/learn-co-curriculum/java-instance-methods-quiz/issues/new\" target=\"_blank\"><img id=\"issue-img\" title=\"Create New Issue\" alt=\"Create New Issue\"></a>\n</header>\n\n<p>It's time to check your knowledge! Use this quiz to create a custom study guide.\nNote any answers that were marked incorrect, so you can study the relevant\nmaterial and try this quiz again.</p>\n\n<p>If you don't know the answer to a question, please do not guess. Instead, select\n\"I don't know\". It's OK not to know everything and to admit when we're unsure.</p>",
+    "description": "<div id=\"git-data-element\" data-org=\"learn-co-curriculum\" data-repo=\"java-instance-methods-quiz\"></div>\n<header class=\"fis-header\">\n  <a class=\"fis-git-link\" href=\"https://github.com/learn-co-curriculum/java-instance-methods-quiz/issues/new\" target=\"_blank\"><img id=\"issue-img\" title=\"Create New Issue\" alt=\"Create New Issue\"></a>\n</header>\n\n<p>It's time to check your knowledge! Use this quiz to create a custom study guide.\nNote any answers that were marked incorrect, so you can study the relevant\nmaterial and try this quiz again.</p>",
     "quiz_type": "assignment",
     "time_limit": null,
     "timer_autosubmit_disabled": false,
@@ -71,7 +71,7 @@
     "only_visible_to_overrides": false,
     "assignment_group_id": 20001,
     "show_correct_answers_last_attempt": true,
-    "version_number": 3,
+    "version_number": 4,
     "has_access_code": false,
     "post_to_sis": false,
     "migration_id": null,
@@ -87,9 +87,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524556,
       "position": null,
-      "question_name": "Fill in Multiple Blanks Question",
-      "question_type": "fill_in_multiple_blanks_question",
-      "question_text": "<p>In order for Active Record to work, it is necessary to follow the naming\nconventions it is expecting. Specifically, the name of the class must be\n[answer1] and the name of the table must be [answer2].</p>",
+      "question_name": "Mutator Methods",
+      "question_type": "multiple_choice_question",
+      "question_text": "<p>Select the correct statement to assign the instance variable to the parameter value.</p>\n<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Movie</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"nc\">String</span> <span class=\"n\">title</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">rating</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">setRating</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">rating</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"o\">???</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -99,20 +99,36 @@
       "neutral_comments_html": "",
       "answers": [
         {
-          "id": "5512",
-          "text": "singular",
+          "id": 2578,
+          "text": "",
+          "html": "<p><code>this.rating = rating;</code></p>",
           "comments": "",
-          "comments_html": "",
-          "weight": 100.0,
-          "blank_id": "answer1"
+          "comments_html": "<p>Correct! The qualified name <code>this.rating</code> refers to the instance variable.\nThe simple name <code>rating</code> refers to the parameter.</p>",
+          "weight": 100.0
         },
         {
-          "id": "8992",
-          "text": "plural",
+          "id": 7994,
+          "text": "",
+          "html": "<p><code>rating = this.rating;</code></p>",
           "comments": "",
-          "comments_html": "",
-          "weight": 100.0,
-          "blank_id": "answer2"
+          "comments_html": "<p>Sorry, that is not correct. The qualified name <code>this.rating</code> refers to the instance variable.\nThe simple name <code>rating</code> refers to the parameter.\nThe correct assignment is <code>this.rating = rating;</code></p>",
+          "weight": 0.0
+        },
+        {
+          "id": 9832,
+          "text": "",
+          "html": "<p><code>Moving.rating = rating;</code></p>",
+          "comments": "",
+          "comments_html": "<p>Sorry, that is not correct. The variable <code>rating</code> is not static. The qualified name <code>this.rating</code> refers to the instance variable.\nThe simple name <code>rating</code> refers to the parameter.\nThe correct assignment is <code>this.rating = rating;</code></p>",
+          "weight": 0.0
+        },
+        {
+          "id": 6024,
+          "text": "",
+          "html": "<p>I don't know</p>",
+          "comments": "",
+          "comments_html": "<p>Be sure to study the source/s for this question. You'll get it next time.\nThe qualified name <code>this.rating</code> refers to the instance variable.\nThe simple name <code>rating</code> refers to the parameter.\nThe correct assignment is <code>this.rating = rating;</code></p>",
+          "weight": 0.0
         }
       ],
       "variables": null,
@@ -128,9 +144,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524557,
       "position": null,
-      "question_name": "Multiple Answers Question",
-      "question_type": "multiple_answers_question",
-      "question_text": "<p>We have a variable <code>lunch_menu</code>, set equal to an array of lunch menu items:</p>\n<div class=\"highlight\"><pre class=\"highlight ruby\"><code><span class=\"n\">lunch_menu</span> <span class=\"o\">=</span> <span class=\"p\">[</span><span class=\"s2\">\"pizza\"</span><span class=\"p\">,</span> <span class=\"s2\">\"sandwich\"</span><span class=\"p\">,</span> <span class=\"s2\">\"sushi\"</span><span class=\"p\">,</span> <span class=\"s2\">\"soup\"</span><span class=\"p\">,</span> <span class=\"s2\">\"salad\"</span><span class=\"p\">]</span>\n</code></pre></div>\n<p>Since you're super hungry and super excited about lunch, use the <code>.each</code> method\nto enumerate over the array and output a string to the terminal with each lunch\nmenu item with an <code>\"!\"</code> at the end.</p>\n\n<p>Which piece of code will achieve the desired result? Select all that apply:</p>",
+      "question_name": "Variable Shadowing",
+      "question_type": "true_false_question",
+      "question_text": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Party</span> <span class=\"o\">{</span>\n\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">orderMorePizzas</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">quantity</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span> <span class=\"o\">+=</span> <span class=\"n\">quantity</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">setGuestCount</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">){</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>\n<p>The <code>orderMorePizzas</code> method can be updated to replace  <code>this.pizzaCount</code>\nwith just <code>pizzaCount</code>, and the code will compile and\nproduce the same result.</p>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -140,44 +156,18 @@
       "neutral_comments_html": "",
       "answers": [
         {
-          "id": "977",
-          "text": "",
           "comments": "",
-          "comments_html": "<p>Correct! Using <code>each</code> lets us access each element of the array in the block,\nand we can output a string by using <code>puts</code>.</p>",
-          "weight": 100.0,
-          "html": "<div class=\"highlight\"><pre class=\"highlight ruby\"><code><span class=\"n\">lunch_menu</span><span class=\"p\">.</span><span class=\"nf\">each</span> <span class=\"k\">do</span> <span class=\"o\">|</span><span class=\"n\">lunch_item</span><span class=\"o\">|</span>\n  <span class=\"nb\">puts</span> <span class=\"n\">lunch_item</span> <span class=\"o\">+</span> <span class=\"s2\">\"!\"</span>\n<span class=\"k\">end</span>\n</code></pre></div>"
+          "comments_html": "<p>Correct!  The <code>orderMorePizzas</code> method does not define a parameter or local variable\nnamed <code>pizzaCount</code>, so the instance variable <code>pizzaCount</code> can be referenced using\nthe simple name <code>pizzaCount</code>.  It is ok to reference it by <code>this.pizzaCount</code>, but not necessary.</p>",
+          "text": "True",
+          "weight": 100,
+          "id": 4577
         },
         {
-          "id": "1056",
-          "text": "",
           "comments": "",
-          "comments_html": "<p>This code would result in an error, since <code>lunch_menu</code> is an array, and we\ncan't us the <code>+</code> method to add a string to the array. How can we iterate over\neach element?</p>",
-          "weight": 0.0,
-          "html": "<div class=\"highlight\"><pre class=\"highlight ruby\"><code><span class=\"nb\">puts</span> <span class=\"n\">lunch_menu</span> <span class=\"o\">+</span> <span class=\"s2\">\"!\"</span>\n</code></pre></div>"
-        },
-        {
-          "id": "1458",
-          "text": "",
-          "comments": "",
-          "comments_html": "<p>Correct! Using <code>each</code> lets us access each element of the array in the block,\nand we can output a string by using <code>puts</code>.</p>",
-          "weight": 100.0,
-          "html": "<div class=\"highlight\"><pre class=\"highlight ruby\"><code><span class=\"n\">lunch_menu</span><span class=\"p\">.</span><span class=\"nf\">each</span> <span class=\"k\">do</span> <span class=\"o\">|</span><span class=\"n\">lunch_item</span><span class=\"o\">|</span>\n  <span class=\"nb\">puts</span> <span class=\"s2\">\"</span><span class=\"si\">#{</span><span class=\"n\">lunch_item</span><span class=\"si\">}</span><span class=\"s2\">!\"</span>\n<span class=\"k\">end</span>\n</code></pre></div>"
-        },
-        {
-          "id": "3763",
-          "text": "",
-          "comments": "",
-          "comments_html": "<p>Using <code>each</code> lets us access each element of the array in the block, but this\nmethod doesn't output anything to the terminal since we aren't using <code>puts</code>.</p>",
-          "weight": 0.0,
-          "html": "<div class=\"highlight\"><pre class=\"highlight ruby\"><code><span class=\"n\">lunch_menu</span><span class=\"p\">.</span><span class=\"nf\">each</span> <span class=\"k\">do</span> <span class=\"o\">|</span><span class=\"n\">lunch_item</span><span class=\"o\">|</span>\n  <span class=\"s2\">\"</span><span class=\"si\">#{</span><span class=\"n\">lunch_item</span><span class=\"si\">}</span><span class=\"s2\">!\"</span>\n<span class=\"k\">end</span>\n</code></pre></div>"
-        },
-        {
-          "id": "2888",
-          "text": "",
-          "comments": "",
-          "comments_html": "<p>Be sure to study the source/s for this question. You'll get it next time.</p>",
-          "weight": 0.0,
-          "html": "<p>I don't know.</p>"
+          "comments_html": "<p>Sorry, that is not correct.  The <code>orderMorePizzas</code> method does not define a parameter or local variable\nnamed <code>pizzaCount</code>, so the instance variable <code>pizzaCount</code> can be referenced using\nthe simple name <code>pizzaCount</code>.  It is ok to reference it by <code>this.pizzaCount</code>, but not necessary.</p>",
+          "text": "False",
+          "weight": 0,
+          "id": 5530
         }
       ],
       "variables": null,
@@ -193,9 +183,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524558,
       "position": null,
-      "question_name": "True/False Question",
+      "question_name": "Variable Shadowing",
       "question_type": "true_false_question",
-      "question_text": "<p>When we run <code>git add .</code>, <strong>all</strong> files that have been created or modified since\nthe last commit are staged and will be included in the next commit.&nbsp;</p>",
+      "question_text": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Party</span> <span class=\"o\">{</span>\n\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">orderMorePizzas</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">quantity</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span> <span class=\"o\">+=</span> <span class=\"n\">quantity</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">setGuestCount</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">){</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>\n<p>The <code>setGuestCount</code> method can be updated to replace <code>this.guestCount</code>\nwith just <code>guestCount</code>, and the code would compile and\nproduce the same result.</p>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -206,14 +196,14 @@
       "answers": [
         {
           "comments": "",
-          "comments_html": "<p>Not quite. Be sure to review the <code>.gitignore</code> source for this question. You'll\nget it next time!</p>",
+          "comments_html": "<p>Sorry, that is not correct.  The <code>setGuestCount</code> method defines a parameter variable\nnamed <code>guestCount</code>, so the instance variable <code>guestCount</code> is shadowed by the\nparameter variable.  The method must use the qualified name\n<code>this.guestCount</code> to refer to the instance variable.</p>",
           "text": "True",
           "weight": 0,
           "id": 4175
         },
         {
           "comments": "",
-          "comments_html": "",
+          "comments_html": "<p>Correct!  The <code>setGuestCount</code> method defines a parameter variable\nnamed <code>guestCount</code>, so the instance variable <code>guestCount</code> is shadowed by the\nparameter variable.  The method must use the qualified name\n<code>this.guestCount</code> to refer to the instance variable.</p>",
           "text": "False",
           "weight": 100,
           "id": 636
@@ -232,9 +222,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524559,
       "position": null,
-      "question_name": "Short Answer Question",
-      "question_type": "short_answer_question",
-      "question_text": "<p>A/an _____ is simply a well-defined procedure, or set of instructions, for\naccomplishing a specific task.</p>",
+      "question_name": "Is this allowed?",
+      "question_type": "multiple_answers_question",
+      "question_text": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">StaticOrNot</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">a</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">b</span><span class=\"o\">;</span>\n    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">int</span> <span class=\"n\">c</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">method1</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span> <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">a</span> <span class=\"o\">);</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">method2</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">b</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">b</span> <span class=\"o\">=</span> <span class=\"n\">b</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">method3</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">c</span><span class=\"o\">);</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>\n<p>Which methods can access an instance variable\nusing a reference to the implicit parameter  <code>this</code>?\nSelect all that apply.</p>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -244,18 +234,28 @@
       "neutral_comments_html": "",
       "answers": [
         {
-          "id": "3915",
-          "text": "algorithm",
+          "id": 9487,
+          "text": "",
           "comments": "",
-          "comments_html": "",
-          "weight": 100
+          "comments_html": "<p>Correct! Method <code>method1()</code> is an instance method, thus it is passed\nthe implicit parameter <code>this</code> and may access the instance variable\nusing the qualified name <code>this.a</code>.</p>",
+          "weight": 100.0,
+          "html": "<p><code>public void method1()</code></p>"
         },
         {
-          "id": "2966",
-          "text": "Algorithm",
+          "id": 1017,
+          "text": "",
           "comments": "",
-          "comments_html": "",
-          "weight": 100
+          "comments_html": "<p>Correct! Method <code>method2(int b)</code> is an instance method, thus it is passed\nthe implicit parameter <code>this</code> and may access the instance variable using\nthe qualified name <code>this.b</code>. </p>",
+          "weight": 100.0,
+          "html": "<p><code>public void method2(int b)</code></p>"
+        },
+        {
+          "id": 1368,
+          "text": "",
+          "comments": "",
+          "comments_html": "<p>Sorry, that is not correct. Method <code>public static void method3()</code> is a\nstatic method, thus it is <em>not</em> passed the implicit parameter <code>this</code>. </p>",
+          "weight": 0.0,
+          "html": "<p><code>public static void method3()</code></p>"
         }
       ],
       "variables": null,
@@ -271,9 +271,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524560,
       "position": null,
-      "question_name": "Matching Question",
-      "question_type": "matching_question",
-      "question_text": "<p>Match the term with the correct description.</p>",
+      "question_name": "Static Methods",
+      "question_type": "true_false_question",
+      "question_text": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Mouse</span> <span class=\"o\">{</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">speak</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"s\">\"squeak squeak\"</span><span class=\"o\">);</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"n\">speak</span><span class=\"o\">();</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>\n<p>The <code>main</code> method compiles and produces the following output when run:</p>\n<div class=\"highlight\"><pre class=\"highlight plaintext\"><code>squeak squeak\n</code></pre></div>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -283,43 +283,26 @@
       "neutral_comments_html": "",
       "answers": [
         {
-          "id": "2297",
-          "text": "Declarative Programming",
-          "left": "Declarative Programming",
-          "right": "Describes what the end result should be, not the specific actions or steps to\nget to that result.",
           "comments": "",
-          "comments_html": "",
-          "match_id": 7553
+          "comments_html": "<p>Sorry, that is not correct.  The <code>main</code> method is a static method and\nmust call the instance method <code>speak</code> through a reference to a\n<code>Mouse</code> class instance.</p>",
+          "text": "True",
+          "weight": 0,
+          "id": 9289
         },
         {
-          "id": "7113",
-          "text": "Imperative Programming",
-          "left": "Imperative Programming",
-          "right": "Explicitly describes the specific actions or steps for getting to the end\nresult.",
           "comments": "",
-          "comments_html": "",
-          "match_id": 25
+          "comments_html": "<p>Correct!   The <code>main</code> method is a static method and\nmust call the instance method <code>speak</code> through a reference to a\n<code>Mouse</code> class instance.</p>",
+          "text": "False",
+          "weight": 100,
+          "id": 3508
         }
       ],
       "variables": null,
       "formulas": null,
       "answer_tolerance": null,
       "formula_decimal_places": null,
-      "matches": [
-        {
-          "text": "Describes what the end result should be, not the specific actions or steps to\nget to that result.",
-          "match_id": 7553
-        },
-        {
-          "text": "Explicitly describes the specific actions or steps for getting to the end\nresult.",
-          "match_id": 25
-        },
-        {
-          "text": "I don't know.",
-          "match_id": 9613
-        }
-      ],
-      "matching_answer_incorrect_matches": "I don't know."
+      "matches": null,
+      "matching_answer_incorrect_matches": null
     },
     {
       "id": 303959,
@@ -327,9 +310,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524561,
       "position": null,
-      "question_name": "Multiple Dropdowns Question",
-      "question_type": "multiple_dropdowns_question",
-      "question_text": "<div class=\"highlight\"><pre class=\"highlight ruby\"><code><span class=\"k\">module</span> <span class=\"nn\">Talk</span>\n  <span class=\"k\">module</span> <span class=\"nn\">Phrases</span>\n    <span class=\"k\">def</span> <span class=\"nf\">hello</span>\n      <span class=\"s2\">\"Hello!\"</span>\n    <span class=\"k\">end</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">goodbye</span>\n      <span class=\"s2\">\"Good bye!\"</span>\n    <span class=\"k\">end</span>\n  <span class=\"k\">end</span>\n\n  <span class=\"k\">module</span> <span class=\"nn\">Teachers</span>\n    <span class=\"k\">def</span> <span class=\"nf\">teach</span>\n      <span class=\"s2\">\"Repeat after me.\"</span>\n    <span class=\"k\">end</span>\n  <span class=\"k\">end</span>\n<span class=\"k\">end</span>\n</code></pre></div>\n<p>The code sample above is an example of [a1] modules. To access the <code>Teachers</code>\nmodule to include it in a class, we would type include [a2].</p>",
+      "question_name": "Methods",
+      "question_type": "multiple_answers_question",
+      "question_text": "<p>Which methods compile and increment <code>currentPage</code> by 1? Select all that apply.</p>\n<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Book</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">totalPages</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">currentPage</span><span class=\"o\">;</span>\n<span class=\"o\">}</span>\n</code></pre></div>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -339,52 +322,36 @@
       "neutral_comments_html": "",
       "answers": [
         {
-          "id": 6891,
-          "text": "namespaced",
+          "id": 2303,
+          "text": "",
           "comments": "",
-          "comments_html": "<p>Correct! Both <code>Teachers</code> and <code>Phrases</code> are namespaced inside of <code>Talk</code>. They\ncan be accessed using <code>::</code>.</p>",
+          "comments_html": "<p>Correct! The method must not include static, since we need to\nmodified the instance variable <code>currentPage</code>.  The variable\nis not shadowed, so we can access it using the simple name <code>currentPage</code>.</p>",
           "weight": 100.0,
-          "blank_id": "a1"
+          "html": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">turnPage</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n    <span class=\"n\">currentPage</span><span class=\"o\">++;</span>\n<span class=\"o\">}</span>\n</code></pre></div>"
         },
         {
-          "id": 71,
-          "text": "subclass inherited",
+          "id": 6215,
+          "text": "",
           "comments": "",
-          "comments_html": "<p>There aren't any classes, nor any subclass inheritance, in the syntax above.\nYou might want to review the resource/s for this question.</p>",
-          "weight": 0.0,
-          "blank_id": "a1"
-        },
-        {
-          "id": 6025,
-          "text": "I don't know",
-          "comments": "",
-          "comments_html": "<p>Be sure to study the source/s for this question. You'll get it next time.</p>",
-          "weight": 0.0,
-          "blank_id": "a1"
-        },
-        {
-          "id": 6930,
-          "text": "Talk::Teachers",
-          "comments": "",
-          "comments_html": "<p>Correct! To <code>include</code> the <code>Teachers</code> module, we need to access it using <code>::</code>\non the module that contains it.</p>",
+          "comments_html": "<p>Correct! The method must not include static, since we need to\nmodified the instance variable <code>currentPage</code>.  Since it is an\ninstance method, we can use the implicit parameter <code>this</code> to access\nthe instance variable.</p>",
           "weight": 100.0,
-          "blank_id": "a2"
+          "html": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">turnPage</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n    <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">currentPage</span><span class=\"o\">++;</span>\n<span class=\"o\">}</span>\n</code></pre></div>"
         },
         {
-          "id": 4261,
-          "text": "Teachers::Talk",
+          "id": 8018,
+          "text": "",
           "comments": "",
-          "comments_html": "<p>When using <code>::</code> to access a nested module, we put the module that contains the\nother module on the left side of the double colon.</p>",
+          "comments_html": "<p>Sorry, that is not correct. A static method does not have\nthe implicit parameter <code>this</code> and can't reference \nan instance variable without an explicit object reference.</p>",
           "weight": 0.0,
-          "blank_id": "a2"
+          "html": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">turnPage</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n    <span class=\"n\">currentPage</span><span class=\"o\">++;</span>\n<span class=\"o\">}</span>\n</code></pre></div>"
         },
         {
-          "id": 1655,
-          "text": "Talk.Teachers",
+          "id": 4983,
+          "text": "",
           "comments": "",
-          "comments_html": "<p>Not quite. This looks more like we're trying to call a method on <code>Talk</code>.</p>",
+          "comments_html": "<p>Sorry, that is not correct. A static method does not have\nthe implicit parameter <code>this</code>.</p>",
           "weight": 0.0,
-          "blank_id": "a2"
+          "html": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">turnPage</span><span class=\"o\">()</span> <span class=\"o\">{</span>\n    <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">currentPage</span><span class=\"o\">++;</span>\n<span class=\"o\">}</span>\n</code></pre></div>"
         }
       ],
       "variables": null,
@@ -400,9 +367,9 @@
       "quiz_group_id": null,
       "assessment_question_id": 524562,
       "position": null,
-      "question_name": "Multiple Choice Question",
-      "question_type": "multiple_choice_question",
-      "question_text": "<p>Calculate the <strong>time complexity</strong> for the following code using Big O notation:</p>\n<div class=\"highlight\"><pre class=\"highlight javascript\"><code><span class=\"kd\">function</span> <span class=\"nx\">logLetter</span><span class=\"p\">(</span><span class=\"nx\">string</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n  <span class=\"k\">for</span> <span class=\"p\">(</span><span class=\"kd\">const</span> <span class=\"nx\">letter</span> <span class=\"k\">of</span> <span class=\"nx\">string</span><span class=\"p\">)</span> <span class=\"p\">{</span>\n    <span class=\"nx\">console</span><span class=\"p\">.</span><span class=\"nx\">log</span><span class=\"p\">(</span><span class=\"nx\">letter</span><span class=\"p\">);</span>\n  <span class=\"p\">}</span>\n<span class=\"p\">}</span>\n</code></pre></div>",
+      "question_name": "Variable Shadowing",
+      "question_type": "true_false_question",
+      "question_text": "<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Book</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">totalPages</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">currentPage</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"kt\">void</span> <span class=\"nf\">turnToPage</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">page</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">currentPage</span> <span class=\"o\">=</span> <span class=\"n\">page</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n<span class=\"o\">}</span>\n</code></pre></div>\n<p>The parameter <code>page</code> shadows the instance variable <code>currentPage</code>.</p>",
       "points_possible": 1.0,
       "correct_comments": "",
       "incorrect_comments": "",
@@ -412,44 +379,163 @@
       "neutral_comments_html": "",
       "answers": [
         {
-          "id": 5311,
-          "text": "",
-          "html": "<p>O(n)</p>",
           "comments": "",
-          "comments_html": "<p>Correct! Since the algorithm needs to iterate through each letter of the input,\nthe time complexity will grow in linear proportion to the size of the input.</p>",
+          "comments_html": "<p>That is incorrect.  The parameter <code>page</code> does not have the same\nname as the instance variable <code>currentPage</code>, thus it does not shadow it.  We\ncould rewrite the assignment statement as <code>currentPage = page</code>.</p>",
+          "text": "True",
+          "weight": 0,
+          "id": 6093
+        },
+        {
+          "comments": "",
+          "comments_html": "<p>You are correct!  The parameter <code>page</code> does not have the same\nname as the instance variable <code>currentPage</code>, thus it does not shadow it.  We\ncould rewrite the assignment statement as <code>currentPage = page</code>.</p>",
+          "text": "False",
+          "weight": 100,
+          "id": 1103
+        }
+      ],
+      "variables": null,
+      "formulas": null,
+      "answer_tolerance": null,
+      "formula_decimal_places": null,
+      "matches": null,
+      "matching_answer_incorrect_matches": null
+    },
+    {
+      "id": 303966,
+      "quiz_id": 44708,
+      "quiz_group_id": null,
+      "assessment_question_id": 524580,
+      "position": null,
+      "question_name": "Constructors",
+      "question_type": "multiple_choice_question",
+      "question_text": "<p>What is printed?</p>\n<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Party</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"nf\">Party</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">,</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span> <span class=\"o\">=</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"nf\">Party</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"nc\">Party</span> <span class=\"n\">superbowlParty</span> <span class=\"o\">=</span> <span class=\"k\">new</span> <span class=\"nc\">Party</span><span class=\"o\">(</span><span class=\"mi\">5</span><span class=\"o\">,</span> <span class=\"mi\">50</span><span class=\"o\">);</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"n\">superbowlParty</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span><span class=\"o\">);</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"n\">superbowlParty</span><span class=\"o\">.</span><span class=\"na\">guestCount</span><span class=\"o\">);</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>",
+      "points_possible": 1.0,
+      "correct_comments": "",
+      "incorrect_comments": "",
+      "neutral_comments": "",
+      "correct_comments_html": "",
+      "incorrect_comments_html": "",
+      "neutral_comments_html": "",
+      "answers": [
+        {
+          "id": 8366,
+          "text": "",
+          "html": "<p>5\n50</p>",
+          "comments": "",
+          "comments_html": "<p>Correct! The 2-args constructor is called to initialize the instance variables using the parameter values.</p>",
           "weight": 100.0
         },
         {
-          "id": 1026,
+          "id": 7263,
           "text": "",
-          "html": "<p>O(1)</p>",
+          "html": "<p>50\n5</p>",
           "comments": "",
-          "comments_html": "<p>Not quite. O(1) would mean the algorithm's runtime stays the same regardless of\nhow large the input is.</p>",
+          "comments_html": "<p>That is not correct. The 2-args constructor is called to initialize the instance\nvariable <code>pizzaCount</code> to <code>5</code>  and <code>guestCount</code> to <code>50</code>.</p>",
           "weight": 0.0
         },
         {
-          "id": 3625,
+          "id": 4259,
           "text": "",
-          "html": "<p>O(n²)</p>",
+          "html": "<p>0\n0</p>",
           "comments": "",
-          "comments_html": "<p>Not quite. O(n²) would mean the algorithm's runtime grows exponentially as the\nsize of the input grows, like an algorithm that involved a nested loop.</p>",
+          "comments_html": "<p>Sorry, that is not correct. The 2-args constructor is called to initialize the instance\nvariable <code>pizzaCount</code> to <code>5</code>  and <code>guestCount</code> to <code>50</code>.</p>",
           "weight": 0.0
         },
         {
-          "id": 7275,
+          "id": 6403,
           "text": "",
-          "html": "<p>O(log n)</p>",
+          "html": "<p>5\n0</p>",
           "comments": "",
-          "comments_html": "<p>Not quite. O(log n) would mean that the algorithm's time complexity grows in a\nlogarithmic proportion to the size of the input (so an input of size 1 would\ntake 1 step, size 10 would take 2 steps, size 100 would take 3 steps, etc).</p>",
+          "comments_html": "<p>Sorry, that is not correct. The 2-args constructor is called to initialize the instance\nvariable <code>pizzaCount</code> to <code>5</code>  and <code>guestCount</code> to <code>50</code>.</p>",
+          "weight": 0.0
+        }
+      ],
+      "variables": null,
+      "formulas": null,
+      "answer_tolerance": null,
+      "formula_decimal_places": null,
+      "matches": null,
+      "matching_answer_incorrect_matches": null
+    },
+    {
+      "id": 303967,
+      "quiz_id": 44708,
+      "quiz_group_id": null,
+      "assessment_question_id": 524581,
+      "position": null,
+      "question_name": "Constructors",
+      "question_type": "multiple_choice_question",
+      "question_text": "<p>What is printed?</p>\n<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Party</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"nf\">Party</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">,</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span> <span class=\"o\">=</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"nf\">Party</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"nc\">Party</span> <span class=\"n\">superbowlParty</span> <span class=\"o\">=</span> <span class=\"k\">new</span> <span class=\"nc\">Party</span><span class=\"o\">(</span><span class=\"mi\">10</span><span class=\"o\">);</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"n\">superbowlParty</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span><span class=\"o\">);</span>\n        <span class=\"nc\">System</span><span class=\"o\">.</span><span class=\"na\">out</span><span class=\"o\">.</span><span class=\"na\">println</span><span class=\"o\">(</span><span class=\"n\">superbowlParty</span><span class=\"o\">.</span><span class=\"na\">guestCount</span><span class=\"o\">);</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>",
+      "points_possible": 1.0,
+      "correct_comments": "",
+      "incorrect_comments": "",
+      "neutral_comments": "",
+      "correct_comments_html": "",
+      "incorrect_comments_html": "",
+      "neutral_comments_html": "",
+      "answers": [
+        {
+          "id": 9467,
+          "text": "",
+          "html": "<p>0\n10</p>",
+          "comments": "",
+          "comments_html": "<p>Correct! The 1-arg constructor is called to initialize the instance variable\n<code>guestCount</code> using the parameter value <code>10</code>.  The <code>pizzaCount</code> is initialized to the\ndefault value of <code>0</code>.</p>",
+          "weight": 100.0
+        },
+        {
+          "id": 5093,
+          "text": "",
+          "html": "<p>0\n0</p>",
+          "comments": "",
+          "comments_html": "<p>That is not correct. The 1-arg constructor is called to initialize the instance variable\n<code>guestCount</code> using the parameter value <code>10</code>.  The <code>pizzaCount</code> is initialized to the\ndefault value of <code>0</code>.</p>",
           "weight": 0.0
         },
         {
-          "id": 9398,
+          "id": 1526,
           "text": "",
-          "html": "<p>I don't know</p>",
+          "html": "<p>10\n0</p>",
           "comments": "",
-          "comments_html": "<p>Be sure to study the source/s for this question. You'll get it next time.</p>",
+          "comments_html": "<p>That is not correct.  The 1-arg constructor is called to initialize the instance variable\n<code>guestCount</code> using the parameter value <code>10</code>.  The <code>pizzaCount</code> is initialized to the\ndefault value of <code>0</code>.</p>",
           "weight": 0.0
+        }
+      ],
+      "variables": null,
+      "formulas": null,
+      "answer_tolerance": null,
+      "formula_decimal_places": null,
+      "matches": null,
+      "matching_answer_incorrect_matches": null
+    },
+    {
+      "id": 303968,
+      "quiz_id": 44708,
+      "quiz_group_id": null,
+      "assessment_question_id": 524582,
+      "position": null,
+      "question_name": "Constructors",
+      "question_type": "true_false_question",
+      "question_text": "<p>Java generates a default no-args constructor for the <code>Party</code> class,\nso the <code>main</code> method can call it with:\n<code>Party superbowlParty = new Party();</code></p>\n<div class=\"highlight\"><pre class=\"highlight java\"><code><span class=\"kd\">public</span> <span class=\"kd\">class</span> <span class=\"nc\">Party</span> <span class=\"o\">{</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n    <span class=\"kd\">private</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n\n    <span class=\"kd\">public</span> <span class=\"nf\">Party</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">pizzaCount</span><span class=\"o\">,</span> <span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">pizzaCount</span> <span class=\"o\">=</span> <span class=\"n\">pizzaCount</span><span class=\"o\">;</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"nf\">Party</span><span class=\"o\">(</span><span class=\"kt\">int</span> <span class=\"n\">guestCount</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"k\">this</span><span class=\"o\">.</span><span class=\"na\">guestCount</span> <span class=\"o\">=</span> <span class=\"n\">guestCount</span><span class=\"o\">;</span>\n    <span class=\"o\">}</span>\n\n    <span class=\"kd\">public</span> <span class=\"kd\">static</span> <span class=\"kt\">void</span> <span class=\"nf\">main</span><span class=\"o\">(</span><span class=\"nc\">String</span><span class=\"o\">[]</span> <span class=\"n\">args</span><span class=\"o\">)</span> <span class=\"o\">{</span>\n        <span class=\"nc\">Party</span> <span class=\"n\">superbowlParty</span> <span class=\"o\">=</span> <span class=\"k\">new</span> <span class=\"nc\">Party</span><span class=\"o\">();</span>\n    <span class=\"o\">}</span>\n\n<span class=\"o\">}</span>\n</code></pre></div>",
+      "points_possible": 1.0,
+      "correct_comments": "",
+      "incorrect_comments": "",
+      "neutral_comments": "",
+      "correct_comments_html": "",
+      "incorrect_comments_html": "",
+      "neutral_comments_html": "",
+      "answers": [
+        {
+          "comments": "",
+          "comments_html": "<p>That is not correct. Java only generates a default no-args constructor if you don't define\nany constructors.  Since two constructors are defined, Java will not generate a no-args constructor.</p>",
+          "text": "True",
+          "weight": 0,
+          "id": 6617
+        },
+        {
+          "comments": "",
+          "comments_html": "<p>You are correct! Java only generates a default no-args constructor if you don't define\nany constructors.  Since two constructors are defined, Java will not generate a no-args constructor.</p>",
+          "text": "False",
+          "weight": 100,
+          "id": 3769
         }
       ],
       "variables": null,
